@@ -42,32 +42,30 @@ const Countries = () => {
     <section className="w-screen flex flex-col items-center justify-center">
       <div className="bg-secondary text-contrast p-4 container">
         <h1 className="text-xl mb-2">Countries</h1>
-        <div className="text-sm w-full flex flex-row-reverse gap-2 mb-4">
+        <div className="text-sm w-full flex gap-2 mb-4">
+          <input
+            className="w-full rounded-md px-2 py-1"
+            id="inputName"
+            placeholder="Country Name..."
+          />
           <div
             onClick={handleInputChange}
             className="py-1 px-2 bg-alert rounded-md"
           >
             Search
           </div>
-          <input
-            className="w-full rounded-md px-2 py-1"
-            id="inputName"
-            placeholder="Country Name..."
-          />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
           {countries.map((country) => (
             <div className="bg-primary p-2 rounded-lg" key={country.wikiDataId}>
               <p className="text-xs">{country.wikiDataId}</p>
-              <h1 className="text-lg">
-                {country.name}
-                <a
-                  href={`/countries/${country.code}`}
-                  className="py-1 px-2 bg-alert rounded-md text-sm float-end"
-                >
-                  Saiba Mais
-                </a>
-              </h1>
+              <h1 className="text-lg font-bold">{country.name}</h1>
+              <a
+                href={`/countries/${country.code}`}
+                className="py-1 px-2 bg-alert rounded-md text-sm float-end"
+              >
+                More
+              </a>
             </div>
           ))}
         </div>
