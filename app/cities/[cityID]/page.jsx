@@ -17,7 +17,6 @@ const CityDetails = (params) => {
             "X-RapidAPI-Host": "wft-geo-db.p.rapidapi.com",
           },
         });
-        console.log(response.data.data);
         setCityData(response.data.data);
       } catch (error) {
         console.error(error);

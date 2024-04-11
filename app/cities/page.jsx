@@ -21,7 +21,6 @@ const Cities = () => {
             "X-RapidAPI-Host": "wft-geo-db.p.rapidapi.com",
           },
         });
-        console.log(response.data.data);
         setCountries(response.data.data);
       } catch (error) {
         console.error(error);
@@ -66,7 +65,12 @@ const Cities = () => {
               <h1 className="text-lg font-bold">{city.name}</h1>
               <p className="text-xs">
                 <a>{city.region}</a>,{" "}
-                <a href={`/countries/${city.countryCode}`}>{city.country}</a>
+                <a
+                  className="underline hover:text-alert"
+                  href={`/countries/${city.countryCode}`}
+                >
+                  {city.country}
+                </a>
               </p>
               <a
                 href={`/cities/${city.id}`}
