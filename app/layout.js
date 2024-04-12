@@ -13,8 +13,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={lora.className}>
-        <Header />
-        <main className="pt-0 sm:pt-12 pb-12 sm:pb-0">{children}</main>
+        <img
+          className="flex absolute min-h-full min-w-full"
+          style={{
+            backgroundImage: 'url("/skyline.jpg")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            filter: "brightness(0.5) blur(2px)",
+          }}
+        />
+        <main className="z-10 flex absolute min-h-full min-w-full items-center">
+          <Header />
+          {children}
+        </main>
       </body>
     </html>
   );

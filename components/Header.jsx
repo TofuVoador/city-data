@@ -16,9 +16,6 @@ const Header = () => {
         <a className="p-1 hover:text-secondary" href="/about">
           About
         </a>
-        <a className="p-1 hover:text-secondary" href="/contact">
-          Contact
-        </a>
       </nav>
     </header>
   );

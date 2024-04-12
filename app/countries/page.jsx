@@ -4,7 +4,7 @@ const axios = require("axios");
 
 const Countries = () => {
   const [queryParams, setQueryParams] = useState({
-    limit: 10,
+    limit: 8,
     offset: 0,
   });
   const [countries, setCountries] = useState([]);
@@ -75,7 +75,7 @@ const Countries = () => {
             onClick={() => {
               setQueryParams({
                 ...queryParams,
-                offset: queryParams.offset - 10,
+                offset: queryParams.offset - 8,
               });
             }}
           >
@@ -86,7 +86,7 @@ const Countries = () => {
             onClick={() => {
               setQueryParams({
                 ...queryParams,
-                offset: queryParams.offset + 10,
+                offset: queryParams.offset + 8,
               });
             }}
           >
