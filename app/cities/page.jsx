@@ -48,10 +48,7 @@ const Cities = () => {
             id="inputName"
             placeholder="City Name..."
           />
-          <div
-            onClick={handleInputChange}
-            className="py-1 px-2 bg-alert rounded-md"
-          >
+          <div onClick={handleInputChange} className="py-1 px-2 bg-alert rounded-md">
             Search
           </div>
         </div>
@@ -65,10 +62,7 @@ const Cities = () => {
               <h1 className="text-lg font-bold">{city.name}</h1>
               <p className="text-xs">
                 <a>{city.region}</a>,{" "}
-                <a
-                  className="underline hover:text-alert"
-                  href={`/countries/${city.countryCode}`}
-                >
+                <a className="underline hover:text-alert" href={`/countries/${city.countryCode}`}>
                   {city.country}
                 </a>
               </p>

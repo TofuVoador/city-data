@@ -48,10 +48,7 @@ const Countries = () => {
             id="inputName"
             placeholder="Country Name..."
           />
-          <div
-            onClick={handleInputChange}
-            className="py-1 px-2 bg-alert rounded-md"
-          >
+          <div onClick={handleInputChange} className="py-1 px-2 bg-alert rounded-md">
             Search
           </div>
         </div>

@@ -31,20 +31,13 @@ const CityDetails = (params) => {
         <h1 className="text-xl">{cityData.name}</h1>
         <p className="text-sm mb-4">
           <a>{cityData.region}</a>,{" "}
-          <a
-            className="underline hover:text-alert"
-            href={`/countries/${cityData.countryCode}`}
-          >
+          <a className="underline hover:text-alert" href={`/countries/${cityData.countryCode}`}>
             {cityData.country}
           </a>
         </p>
         <p className="text-sm">
-          {cityData.latitude >= 0
-            ? `${cityData.latitude}N`
-            : `${-cityData.latitude}S`}{" "}
-          {cityData.longitude >= 0
-            ? `${cityData.longitude}E`
-            : `${-cityData.longitude}W`}
+          {cityData.latitude >= 0 ? `${cityData.latitude}N` : `${-cityData.latitude}S`}{" "}
+          {cityData.longitude >= 0 ? `${cityData.longitude}E` : `${-cityData.longitude}W`}
         </p>
       </div>
     </section>
